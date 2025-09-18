@@ -1,0 +1,243 @@
+/* Our School's Colors (Northville High School, Michigan) consists of colors: Orange, Black, and White*/
+:root {
+  --nhs-orange: #ff8c00;
+  --nhs-black: #000000;
+  --nhs-white: #ffffff;
+  --nhs-light-orange: #ffe4c2;
+  --nhs-dark-orange: #e67e00;
+  --nhs-gray: #f5f5f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: var(--nhs-black);
+  line-height: 1.6;
+  background-color: var(--nhs-white);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header and Nav **/
+header {
+  background-color: var(--nhs-black);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--nhs-white);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--nhs-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--nhs-orange);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--nhs-white);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  padding: 160px 0 100px;
+  background: linear-gradient(135deg, var(--nhs-black) 0%, #2c2c2c 100%);
+  color: var(--nhs-white);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, var(--nhs-orange), #ffaa40);
+  /* Fix this for later */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: var(--nhs-orange);
+  color: var(--nhs-white);
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  border: 2px solid var(--nhs-orange);
+  margin: 0 10px;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--nhs-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(230, 126, 0, 0.2);
+}
+
+.btn-outline:hover {
+  background-color: var(--nhs-orange);
+  color: var(--nhs-white);
+}
+
+/* About Section */
+.about {
+  padding: 100px 0;
+  background-color: var(--nhs-white);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--nhs-black);
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--nhs-black);
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.about-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Activities Section */
+.activites {
+  padding: 100px 0;
+  background-color: var(--nhs-gray);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.activity-card {
+  background-color: var(--nhs-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  border-top: 5px solid var(--nhs-orange);
+}
+
+.activity-card:hover {
+  transform: translateY(-10px);
+}
+
+.activity-content {
+  padding: 25px;
+}
+
+.activity-icon {
+  font-size: 2.5rem;
+  color: var(--nhs-orange);
+  margin-bottom: 20px;
+}
+
+.activity-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--nhs-black);
+}
+
+.activity-content p {
+  color: #555;
+}
+
+/* Events Section */
+.logo-text {
+  color: var(--nhs-white);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+span {
+  color: var(--nhs-orange);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
